@@ -18,6 +18,8 @@ case input_num
           f<< data
           p "Data is inserted"
       when 2
+        p "Please enter name of file"
+        f_name=gets.chomp
           p "Enter char you find in file"
           ch=gets.chomp.to_s
            f=File.open(f_name,"r")
@@ -38,7 +40,8 @@ case input_num
 
       when 3 
           #replace a with c
-         
+          p "Please enter name of file"
+            f_name=gets.chomp
           f=File.open(f_name,"r")
           #f << "this is data of file txt"
           o_data=(f.read());
